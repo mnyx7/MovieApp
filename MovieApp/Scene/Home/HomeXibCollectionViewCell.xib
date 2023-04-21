@@ -46,6 +46,10 @@
                 <constraint firstItem="Iso-ug-QDV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZDP-Tf-zil"/>
             </constraints>
             <size key="customSize" width="363" height="169"/>
+            <connections>
+                <outlet property="posterImage" destination="bzT-iD-9C9" id="Vtj-Uu-KPh"/>
+                <outlet property="titleLabel" destination="Iso-ug-QDV" id="0yc-Vw-xUS"/>
+            </connections>
             <point key="canvasLocation" x="368.70229007633588" y="62.323943661971832"/>
         </collectionViewCell>
     </objects>
