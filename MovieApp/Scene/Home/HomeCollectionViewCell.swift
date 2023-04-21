@@ -13,8 +13,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     var items = [Result]()
     
-    let cellId = "\(MovieCell.self)"
-    //let cellId = "\(HomeXibCollectionViewCell.self)"
+    //let cellId = "\(MovieCell.self)"
+    let cellId = "\(HomeXibCollectionViewCell.self)"
     
     func configure(data: Category) {
         items = data.items
