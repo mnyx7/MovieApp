@@ -11,44 +11,40 @@ class HomeViewController: UIViewController {
 
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var movies = [MovieApp]()
     var viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configViewModel()
         configCollection()
-        
-        
-        collectionView.register(UINib(nibName: "XibCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "XibCollectionViewCell")
-        
-        viewModel.getPopularMovies()
-        //        movieModel.completion = {
-        //            self.collectionView.reloadData()
-        //        }
     }
     
     func configViewModel() {
         viewModel.getPopularMovies()
+        viewModel.getTopRatedMovies()
         viewModel.successCallBack = {
-            //reload collection
+            self.collectionView.reloadData()
         }
     }
-    func configCollection(){
+    func configCollection() {
         
     }
     
 }
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3//burda category vertical scrolldaki itemlerin countu olacaq movieModel.movies.count
+        viewModel.categoryItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "XibCollectionViewCell", for: indexPath) as! XibCollectionViewCell
-        //   cell.movieName = movieModel.movies[indexPath.row].
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+        cell.configure(data: viewModel.categoryItems[indexPath.item])
         return cell
     }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 318)
+    }
 }

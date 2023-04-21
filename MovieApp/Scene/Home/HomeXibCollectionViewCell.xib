@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeXibCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="261" height="289"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="261" height="289"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzT-iD-9C9">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="240"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="167" id="cCX-MK-DjU"/>
+                            <constraint firstAttribute="height" constant="240" id="iYR-8S-HPE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-ug-QDV">
+                        <rect key="frame" x="0.0" y="248" width="261" height="41"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="bzT-iD-9C9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1ca-MW-ecn"/>
+                <constraint firstItem="bzT-iD-9C9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3tB-fo-LkP"/>
+                <constraint firstAttribute="bottom" secondItem="Iso-ug-QDV" secondAttribute="bottom" id="6I8-Hp-uJU"/>
+                <constraint firstItem="Iso-ug-QDV" firstAttribute="top" secondItem="bzT-iD-9C9" secondAttribute="bottom" constant="8" id="KlA-4N-oYU"/>
+                <constraint firstAttribute="trailing" secondItem="Iso-ug-QDV" secondAttribute="trailing" id="LyY-CQ-wNo"/>
+                <constraint firstItem="Iso-ug-QDV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZDP-Tf-zil"/>
+            </constraints>
+            <size key="customSize" width="363" height="169"/>
+            <point key="canvasLocation" x="368.70229007633588" y="62.323943661971832"/>
+        </collectionViewCell>
+    </objects>
+</document>

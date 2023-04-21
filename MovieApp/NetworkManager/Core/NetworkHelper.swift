@@ -14,6 +14,6 @@ class NetworkHelper {
     let apiKey = "e2253416fac0cd2476291eb33c92beb7"
     
     func URLconfig(path: String) -> String {
-     baseURL + path + "api_key=\(apiKey)"
+     baseURL + path + "?api_key=\(apiKey)"
     }
 }
