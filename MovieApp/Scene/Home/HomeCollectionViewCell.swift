@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
-
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var horizontalScrollCV: UICollectionView!
     @IBOutlet private weak var categoryName: UILabel!

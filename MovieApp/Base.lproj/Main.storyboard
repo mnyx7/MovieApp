@@ -52,8 +52,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yqG-sY-N1n">
-                                                    <rect key="frame" x="0.0" y="70" width="368" height="175"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yqG-sY-N1n">
+                                                    <rect key="frame" x="24" y="70" width="344" height="175"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t4K-Le-eeJ">
                                                         <size key="itemSize" width="124" height="163"/>
@@ -107,7 +107,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="yqG-sY-N1n" secondAttribute="bottom" id="HJj-Ku-2sb"/>
                                                 <constraint firstItem="Vvb-e3-R1a" firstAttribute="top" secondItem="oZE-Y6-AKk" secondAttribute="top" constant="24" id="Hty-ph-jhs"/>
                                                 <constraint firstAttribute="trailing" secondItem="yqG-sY-N1n" secondAttribute="trailing" id="QpX-AX-Yut"/>
-                                                <constraint firstItem="yqG-sY-N1n" firstAttribute="leading" secondItem="oZE-Y6-AKk" secondAttribute="leading" id="ZYh-e4-x44"/>
+                                                <constraint firstItem="yqG-sY-N1n" firstAttribute="leading" secondItem="oZE-Y6-AKk" secondAttribute="leading" constant="24" id="ZYh-e4-x44"/>
                                                 <constraint firstItem="yqG-sY-N1n" firstAttribute="top" secondItem="Vvb-e3-R1a" secondAttribute="bottom" constant="16" id="lrb-vW-c9h"/>
                                             </constraints>
                                         </collectionViewCellContentView>

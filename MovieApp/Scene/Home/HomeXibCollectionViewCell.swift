@@ -17,8 +17,8 @@ class HomeXibCollectionViewCell: UICollectionViewCell {
     func configure(data: Result) {
         titleLabel.text = data.title
         posterImage.loadUrl(data.posterPath ?? "")
-        
-        let postBaseUrl = "https://image.tmdb.otg/t/p/original"
-        let imageUrlString  = postBaseUrl + (data.posterPath ?? "")
+//        
+//        let postBaseUrl = "https://image.tmdb.otg/t/p/original"
+//        let imageUrlString  = postBaseUrl + (data.posterPath ?? "")
     }
 }
