@@ -11,13 +11,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var horizontalScrollCV: UICollectionView!
     @IBOutlet private weak var categoryName: UILabel!
     
-    var items = [Result]()
+    private var movieItems = [Result]()
     
     //let cellId = "\(MovieCell.self)"
     let cellId = "\(HomeXibCollectionViewCell.self)"
     
     func configure(data: Category) {
-        items = data.items
+        movieItems = data.items
         categoryName.text = data.title
         horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
         horizontalScrollCV.reloadData()
@@ -26,12 +26,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
 
 extension HomeCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        items.count
+        movieItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeXibCollectionViewCell
         //   cell.movieName = movieModel.movies[indexPath.row].
+        cell.titleLabel.text = movieItems[indexPath.item].title
         cell.backgroundColor = .red
         return cell
     }

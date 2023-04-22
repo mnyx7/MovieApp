@@ -12,11 +12,5 @@ class HomeXibCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+    //configure nan img bu cellde cagiracayiq
 }
-
-

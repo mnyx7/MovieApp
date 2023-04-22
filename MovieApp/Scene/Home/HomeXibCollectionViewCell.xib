@@ -22,14 +22,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzT-iD-9C9">
-                        <rect key="frame" x="0.0" y="0.0" width="167" height="240"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="167" id="cCX-MK-DjU"/>
-                            <constraint firstAttribute="height" constant="240" id="iYR-8S-HPE"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="254.33333333333334"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-ug-QDV">
-                        <rect key="frame" x="0.0" y="248" width="261" height="41"/>
+                        <rect key="frame" x="0.0" y="266.33333333333331" width="261" height="22.666666666666686"/>
                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +37,8 @@
                 <constraint firstItem="bzT-iD-9C9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1ca-MW-ecn"/>
                 <constraint firstItem="bzT-iD-9C9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3tB-fo-LkP"/>
                 <constraint firstAttribute="bottom" secondItem="Iso-ug-QDV" secondAttribute="bottom" id="6I8-Hp-uJU"/>
-                <constraint firstItem="Iso-ug-QDV" firstAttribute="top" secondItem="bzT-iD-9C9" secondAttribute="bottom" constant="8" id="KlA-4N-oYU"/>
+                <constraint firstAttribute="trailing" secondItem="bzT-iD-9C9" secondAttribute="trailing" id="H03-b9-7Ur"/>
+                <constraint firstItem="Iso-ug-QDV" firstAttribute="top" secondItem="bzT-iD-9C9" secondAttribute="bottom" constant="12" id="KlA-4N-oYU"/>
                 <constraint firstAttribute="trailing" secondItem="Iso-ug-QDV" secondAttribute="trailing" id="LyY-CQ-wNo"/>
                 <constraint firstItem="Iso-ug-QDV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZDP-Tf-zil"/>
             </constraints>

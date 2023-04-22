@@ -11,6 +11,12 @@ class HomeViewController: UIViewController {
 
     
     @IBOutlet weak var collectionView: UICollectionView!
+//    private var movieItems = [Result]()
+//    
+//    func configure(data: [Result]) {
+//        movieItems = data
+//        collectionView.reloadData()
+//    }
     
     var movies = [MovieApp]()
     var viewModel = HomeViewModel()
@@ -41,6 +47,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+//        cell.movieItems = viewModel.categoryItems
+//        let postBaseUrl = "https://image.tmdb.otg/t/p/original"
         cell.configure(data: viewModel.categoryItems[indexPath.item])
         return cell
     }
