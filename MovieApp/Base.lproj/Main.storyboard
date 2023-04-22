@@ -234,10 +234,52 @@
             </objects>
             <point key="canvasLocation" x="135" y="1387"/>
         </scene>
+        <!--People View Controller-->
+        <scene sceneID="xfG-yv-Ntr">
+            <objects>
+                <viewController storyboardIdentifier="PeopleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QYz-NK-oi1" customClass="PeopleViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIV-H4-rAT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tfo-NO-nwC">
+                                <rect key="frame" x="20" y="36" width="353" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="li0-82-oUw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QYz-NK-oi1" id="Tgh-Te-xqt"/>
+                                    <outlet property="delegate" destination="QYz-NK-oi1" id="dR2-OU-AOL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uvi-3j-sQo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uvi-3j-sQo" firstAttribute="top" secondItem="tfo-NO-nwC" secondAttribute="top" constant="119" id="MjF-EJ-Tpx"/>
+                            <constraint firstItem="Uvi-3j-sQo" firstAttribute="bottom" secondItem="tfo-NO-nwC" secondAttribute="bottom" constant="67" id="R8u-pB-8l7"/>
+                            <constraint firstItem="tfo-NO-nwC" firstAttribute="width" secondItem="hIV-H4-rAT" secondAttribute="width" multiplier="0.898219" id="idD-Na-vKW"/>
+                            <constraint firstItem="tfo-NO-nwC" firstAttribute="centerX" secondItem="Uvi-3j-sQo" secondAttribute="centerX" id="nw7-vm-McL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DFj-ZC-exr"/>
+                    <connections>
+                        <outlet property="collection" destination="tfo-NO-nwC" id="9Q1-Xh-lY3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIV-xg-Yg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.67175572519079" y="2084.5070422535214"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="G72-vz-Spk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhJ-Sn-GRd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fhJ-Sn-GRd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="Profile 2" id="aJe-3A-Ao9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Slm-fV-SPi">
@@ -248,6 +290,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QYz-NK-oi1" kind="relationship" relationship="rootViewController" id="hEa-1E-V6F"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGs-f0-iMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
