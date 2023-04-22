@@ -48,7 +48,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
 //        cell.movieItems = viewModel.categoryItems
-//        let postBaseUrl = "https://image.tmdb.otg/t/p/original"
         cell.configure(data: viewModel.categoryItems[indexPath.item])
         return cell
     }

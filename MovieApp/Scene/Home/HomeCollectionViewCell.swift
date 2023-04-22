@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var horizontalScrollCV: UICollectionView!
@@ -13,7 +14,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     private var movieItems = [Result]()
     
-    //let cellId = "\(MovieCell.self)"
     let cellId = "\(HomeXibCollectionViewCell.self)"
     
     func configure(data: Category) {
@@ -31,9 +31,11 @@ extension HomeCollectionViewCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeXibCollectionViewCell
-        //   cell.movieName = movieModel.movies[indexPath.row].
-        cell.titleLabel.text = movieItems[indexPath.item].title
-        cell.backgroundColor = .red
+//        cell.titleLabel.text = movieItems[indexPath.item].title
+//        cell.posterImage.sd_setImage(with: URL(string: imageUrlString))
+        cell.configure(data: movieItems[indexPath.item])
+
+        //cell.backgroundColor = .red
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

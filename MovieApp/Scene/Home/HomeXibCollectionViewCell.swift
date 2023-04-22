@@ -12,5 +12,13 @@ class HomeXibCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
-    //configure nan img bu cellde cagiracayiq
+    
+    
+    func configure(data: Result) {
+        titleLabel.text = data.title
+        posterImage.loadUrl(data.posterPath ?? "")
+        
+        let postBaseUrl = "https://image.tmdb.otg/t/p/original"
+        let imageUrlString  = postBaseUrl + (data.posterPath ?? "")
+    }
 }

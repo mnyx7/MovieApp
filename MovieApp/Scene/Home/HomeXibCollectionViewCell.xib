@@ -23,9 +23,15 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzT-iD-9C9">
                         <rect key="frame" x="0.0" y="0.0" width="261" height="254.33333333333334"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="254.33333333333334" id="bvp-6f-me8"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-ug-QDV">
                         <rect key="frame" x="0.0" y="266.33333333333331" width="261" height="22.666666666666686"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22.666666666666686" id="zom-8o-HeH"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
