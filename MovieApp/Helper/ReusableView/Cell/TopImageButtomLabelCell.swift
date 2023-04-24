@@ -17,13 +17,12 @@ import UIKit
 
 class TopImageButtomLabelCell: UICollectionViewCell {
     
-    override func layoutSubviews() {
-        topImage.layer.cornerRadius = 20
-    }
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var topImage: UIImageView!
   
+    override func layoutSubviews() {
+            topImage.layer.cornerRadius = 20
+        }
     
     func configure(data: TopImageBottomLabelCellProtocol) {
         titleLabel.text = data.titleText

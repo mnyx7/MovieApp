@@ -13,7 +13,7 @@ struct Category {
 }
 
 class HomeViewModel {    
-    var categoryItems = [Category]()
+    var items = [Category]()
     
     var successCallBack: (()->())?
     var errorCallBack: ((String)->())?
@@ -25,7 +25,7 @@ class HomeViewModel {
                 print("")
             } else if let movieData = movieData {
                 //                self.items = movieData.results ?? []
-                self.categoryItems.append(Category(title: "Popular", items: movieData.results ?? []))
+                self.items.append(Category(title: "Popular", items: movieData.results ?? []))
                 self.successCallBack?()
             }
         }
@@ -38,7 +38,7 @@ class HomeViewModel {
                 print("")
             } else if let movieData = movieData {
                 //                self.items = movieData.results ?? []
-                self.categoryItems.append(Category(title: "Top Rated", items: movieData.results ?? []))
+                self.items.append(Category(title: "Top Rated", items: movieData.results ?? []))
                 
                 self.successCallBack?()
             }

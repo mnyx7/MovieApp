@@ -11,13 +11,20 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var categoryName: UILabel!
     
     private var movieItems = [Result]()
+    var viewModel = HomeViewModel()
     
-    let cellId = "\(HomeXibCollectionViewCell.self)"
+//    let cellId = "\(HomeXibCollectionViewCell.self)"
+    let cellId = "\(TopImageButtomLabelCell.self)"
+    
+    override func layoutSubviews() {
+        horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
+        
+    }
     
     func configure(data: Category) {
         movieItems = data.items
         categoryName.text = data.title
-        horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
+//        horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
         horizontalScrollCV.reloadData()
     }
 }
@@ -28,9 +35,7 @@ extension HomeCollectionViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeXibCollectionViewCell
-//        cell.titleLabel.text = movieItems[indexPath.item].title
-//        cell.posterImage.sd_setImage(with: URL(string: imageUrlString))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TopImageButtomLabelCell
         cell.configure(data: movieItems[indexPath.item])
 
         //cell.backgroundColor = .red

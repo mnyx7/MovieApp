@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
     @IBOutlet weak var collectionView: UICollectionView!
 //    private var movieItems = [Result]()
 //    
@@ -18,7 +17,7 @@ class HomeViewController: UIViewController {
 //        collectionView.reloadData()
 //    }
     
-    var movies = [MovieApp]()
+//    var movies = [MovieApp]()
     var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
@@ -26,6 +25,7 @@ class HomeViewController: UIViewController {
         
         configViewModel()
         configCollection()
+        
     }
     
     func configViewModel() {
@@ -42,13 +42,13 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.categoryItems.count
+        viewModel.items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
 //        cell.movieItems = viewModel.categoryItems
-        cell.configure(data: viewModel.categoryItems[indexPath.item])
+        cell.configure(data: viewModel.items[indexPath.item])
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
