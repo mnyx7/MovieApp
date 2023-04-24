@@ -15,7 +15,7 @@ class PeopleViewModel {
     
     func getPopularPeople() {
         NetworkManager.shared.request(model: People.self,
-                                      url: NetworkHelper.shared.URLconfig(path: "people/popular")) { people, error in
+                                      url: NetworkHelper.shared.URLconfig(path: "person/popular")) { people, error in
             if let error = error {
                 print("")
             } else if let people = people {

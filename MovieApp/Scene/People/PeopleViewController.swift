@@ -41,7 +41,7 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TopImageButtomLabelCell
         cell.configure(data: viewModel.items[indexPath.item])
-        cell.backgroundColor = .yellow
+//        cell.backgroundColor = .yellow
         return cell
     }
     
