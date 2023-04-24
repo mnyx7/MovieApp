@@ -18,6 +18,24 @@ class HomeViewModel {
     var successCallBack: (()->())?
     var errorCallBack: ((String)->())?
     
+    func getItems() {
+        getMovieItems(category: .topRated)
+        getMovieItems(category: .popular)
+    }
+    
+    private func getMovieItems(category: HomeCategory) {
+        HomeManager.shared.getMovieItems(category: category) { movieData, error in
+            if let error = error {
+                self.errorCallBack?(error)
+            } else if let movieData = movieData {
+                //                self.items = movieData.results ?? []
+                self.items.append(Category(title: "",
+                                           items: movieData.results ?? []))
+                self.successCallBack?()
+            }
+        }
+    }
+    
     func getPopularMovies() {
         NetworkManager.shared.request(model: MovieApp.self,
                                       url: NetworkHelper.shared.URLconfig(path: "movie/popular")) { movieData, error in

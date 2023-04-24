@@ -25,14 +25,24 @@ class HomeViewController: UIViewController {
         
         configViewModel()
         configCollection()
-        
     }
     
     func configViewModel() {
-        viewModel.getPopularMovies()
-        viewModel.getTopRatedMovies()
+//        var items: [HomeCategory] = [ .popular, .topRated ]
+//        for item in items {
+//            viewModel.getMovieItems(category: item)
+//        }
+//
+//        viewModel.getPopularMovies()
+//        viewModel.getTopRatedMovies()
+        
+        viewModel.getItems()
+        
         viewModel.successCallBack = {
             self.collectionView.reloadData()
+        }
+        viewModel.errorCallBack = { message in
+            //error message or alert
         }
     }
     func configCollection() {
