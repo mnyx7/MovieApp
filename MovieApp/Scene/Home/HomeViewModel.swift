@@ -26,7 +26,6 @@ class HomeViewModel {
             } else if let movieData = movieData {
                 //                self.items = movieData.results ?? []
                 self.categoryItems.append(Category(title: "Popular", items: movieData.results ?? []))
-                
                 self.successCallBack?()
             }
         }
