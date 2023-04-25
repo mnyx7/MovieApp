@@ -57,7 +57,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
-//        cell.movieItems = viewModel.categoryItems
+        //        cell.movieItems = viewModel.categoryItems
         cell.configure(data: viewModel.items[indexPath.item])
         return cell
     }

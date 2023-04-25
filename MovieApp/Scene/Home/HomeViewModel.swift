@@ -29,7 +29,7 @@ class HomeViewModel {
                 self.errorCallBack?(error)
             } else if let movieData = movieData {
                 //                self.items = movieData.results ?? []
-                self.items.append(Category(title: "",
+                self.items.append(Category(title: category.rawValue,
                                            items: movieData.results ?? []))
                 self.successCallBack?()
             }

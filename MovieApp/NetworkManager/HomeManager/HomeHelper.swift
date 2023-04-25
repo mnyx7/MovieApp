@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum HomeCategory {
-    case popular
-    case topRated
+enum HomeCategory: String {
+    case popular = "Popular"
+    case topRated = "Top Rated"
 }
 
 enum HomeEndpoint: String {

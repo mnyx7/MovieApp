@@ -109,4 +109,3 @@ enum KnownForDepartment: String, Codable {
     case directing = "Directing"
     case writing = "Writing"
 }
-
