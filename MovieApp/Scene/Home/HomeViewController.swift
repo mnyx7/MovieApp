@@ -8,17 +8,22 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
-//    private var movieItems = [Result]()
-//    
-//    func configure(data: [Result]) {
-//        movieItems = data
-//        collectionView.reloadData()
-//    }
     
-//    var movies = [MovieApp]()
+    @IBOutlet weak var searchBar: UIBarButtonItem!
+    @IBOutlet weak var search: UIBarButtonItem!
+    @IBOutlet weak var collectionView: UICollectionView!
+    //    private var movieItems = [Result]()
+    //    
+    //    func configure(data: [Result]) {
+    //        movieItems = data
+    //        collectionView.reloadData()
+    //    }
+    
+    //    var movies = [MovieApp]()
     var viewModel = HomeViewModel()
+    
+    var movieList = [MovieApp]()
+    var movieListOriginal = [MovieApp]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +33,13 @@ class HomeViewController: UIViewController {
     }
     
     func configViewModel() {
-//        var items: [HomeCategory] = [ .popular, .topRated ]
-//        for item in items {
-//            viewModel.getMovieItems(category: item)
-//        }
-//
-//        viewModel.getPopularMovies()
-//        viewModel.getTopRatedMovies()
+        //        var items: [HomeCategory] = [ .popular, .topRated ]
+        //        for item in items {
+        //            viewModel.getMovieItems(category: item)
+        //        }
+        //
+        //        viewModel.getPopularMovies()
+        //        viewModel.getTopRatedMovies()
         
         viewModel.getItems()
         
@@ -64,4 +69,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collectionView.frame.width, height: 318)
     }
+    
+//    func searchMovie(_ UIBarButtonItem: UISearchBar, textDidChange searchText: String) {
+//        if searchText.isEmpty {
+//             movieList = movieListOriginal
+//        } else {
+//            movieList = movieListOriginal.filter({ item in
+//                item.results?.contains( searchText)!
+//            })
+//        }
+//        collectionView.reloadData()
+//    }
+    
 }

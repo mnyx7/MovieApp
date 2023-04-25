@@ -13,6 +13,7 @@ class ActorMoviesController: UIViewController {
     
     let cellId = "ActorsMovieCell"
     let viewModel = KnownForMovies()
+    let apiUrl = "https://api.themoviedb.org/3/person/popular?api_key=e2253416fac0cd2476291eb33c92beb7"
     
     override func viewDidLoad() {
         super.viewDidLoad()

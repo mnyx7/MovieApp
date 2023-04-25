@@ -13,6 +13,7 @@ class PeopleViewController: UIViewController {
     let viewModel = PeopleViewModel()
     let cellId = "\(TopImageButtomLabelCell.self )"
     var peopleList = [PeopleResult]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +52,7 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ActorMoviesController") as! ActorMoviesController
-        vc.viewModel.items = peopleList[indexPath.item].knownFor ?? []
+        //vc.viewModel.items = peopleList[indexPath.item].knownFor ?? []
         navigationController?.show(vc, sender: nil)
     }
     

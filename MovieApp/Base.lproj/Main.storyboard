@@ -135,10 +135,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="EID-Qq-hfE">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="search-normal" id="D20-FX-n2C"/>
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" image="search-normal" id="D20-FX-n2C"/>
+                            <barButtonItem style="plain" id="SVv-jy-VEV">
+                                <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="aYp-DN-2Kl">
+                                    <rect key="frame" x="247" y="5" width="87" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="o7d-Gz-0nN" id="JZB-UF-glT"/>
+                        <outlet property="search" destination="D20-FX-n2C" id="DJa-aj-iDh"/>
+                        <outlet property="searchBar" destination="SVv-jy-VEV" id="wWH-ki-A8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
