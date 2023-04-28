@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UIBarButtonItem!
     @IBOutlet weak var search: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     //    private var movieItems = [Result]()
@@ -54,6 +53,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    
+    @IBAction func searchTapped(_ sender: Any) {
+        //navigation.show(
+    }
 }
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,16 +72,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collectionView.frame.width, height: 318)
     }
-    
-//    func searchMovie(_ UIBarButtonItem: UISearchBar, textDidChange searchText: String) {
-//        if searchText.isEmpty {
-//             movieList = movieListOriginal
-//        } else {
-//            movieList = movieListOriginal.filter({ item in
-//                item.results?.contains( searchText)!
-//            })
-//        }
-//        collectionView.reloadData()
-//    }
     
 }

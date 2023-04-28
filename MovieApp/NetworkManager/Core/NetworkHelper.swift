@@ -15,6 +15,6 @@ class NetworkHelper {
     let imageBaseUrl = "https://image.tmdb.org/t/p/original/"
     
     func URLconfig(path: String) -> String {
-     baseURL + path + "?api_key=\(apiKey)"
+        baseURL + path + "?api_key=\(apiKey)"
     }
 }

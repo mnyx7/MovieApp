@@ -8,18 +8,16 @@
 import UIKit
 
 class PeopleViewController: UIViewController {
+    @IBOutlet private weak var collection: UICollectionView!
     
-    @IBOutlet weak var collection: UICollectionView!
     let viewModel = PeopleViewModel()
     let cellId = "\(TopImageButtomLabelCell.self )"
-    var peopleList = [PeopleResult]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
         configureViewModel()
-        
     }
     
     func configureUI() {
@@ -30,6 +28,9 @@ class PeopleViewController: UIViewController {
         viewModel.getPopularPeople()
         viewModel.successCallBack = {
             self.collection.reloadData()
+        }
+        viewModel.errorCallBack = { message in
+            print("people error: \(message)")
         }
     }
     
@@ -42,7 +43,6 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TopImageButtomLabelCell
         cell.configure(data: viewModel.items[indexPath.item])
-//        cell.backgroundColor = .yellow
         return cell
     }
     
@@ -52,7 +52,7 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ActorMoviesController") as! ActorMoviesController
-        //vc.viewModel.items = peopleList[indexPath.item].knownFor ?? []
+        vc.viewModel.id = viewModel.items[indexPath.item].id
         navigationController?.show(vc, sender: nil)
     }
     

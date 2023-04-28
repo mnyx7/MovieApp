@@ -39,7 +39,7 @@ struct PeopleResult: Codable, TopImageBottomLabelCellProtocol {
     let adult: Bool?
     let gender, id: Int?
     let knownFor: [KnownFor]?
-    let knownForDepartment: KnownForDepartment?
+    let knownForDepartment: String?
     let name: String?
     let popularity: Double?
     let profilePath: String?
@@ -53,14 +53,16 @@ struct PeopleResult: Codable, TopImageBottomLabelCellProtocol {
     }
 }
 
+
+
 // MARK: - KnownFor
 struct KnownFor: Codable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
     let id: Int?
-    let mediaType: MediaType?
-    let originalLanguage: OriginalLanguage?
+    let mediaType: String?
+    let originalLanguage: String?
     let originalTitle, overview, posterPath, releaseDate: String?
     let title: String?
     let video: Bool?
@@ -102,10 +104,4 @@ enum OriginalLanguage: String, Codable {
     case ko = "ko"
     case tl = "tl"
     case tr = "tr"
-}
-
-enum KnownForDepartment: String, Codable {
-    case acting = "Acting"
-    case directing = "Directing"
-    case writing = "Writing"
 }

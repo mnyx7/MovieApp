@@ -7,31 +7,23 @@
 
 import Foundation
 
-struct KnownForStruct {
-    let image: String
-    let title: String
-    let genre: String
-    let rating: Double
-    let duration: String
-    let items: [KnownFor]
-}
-
-class KnownForMovies {
+class ActorMoviesViewModel {
     
     var successCallBack: (()->())?
     var errorCallBack: ((String)->())?
+    var id: Int?
     
-    var items = [PeopleResult]()
+    var items = [Cast]()
     
     func getKnownFor() {
-        NetworkManager.shared.request(model: People.self,
-                                      url: NetworkHelper.shared.URLconfig(path: "person/popular")) { knownFor, error in
+        PeopleManager.shared.getKnownFor(id: id ?? 0) { data, error in
             if let error = error {
-                print("")
-            } else if let knownFor = knownFor {
-                self.items = knownFor.results ?? []
-               self.successCallBack?()
+                print("Error")
+            } else if let data = data {
+                self.items = data.cast ?? []
+                self.successCallBack?()                
             }
         }
+        
     }
 }

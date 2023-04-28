@@ -6,21 +6,20 @@
 //
 
 import Foundation
-class PeopleViewModel {
-    
+
+class PeopleViewModel {    
     var successCallBack: (()->())?
     var errorCallBack: ((String)->())?
     
     var items = [PeopleResult]()
     
     func getPopularPeople() {
-        NetworkManager.shared.request(model: People.self,
-                                      url: NetworkHelper.shared.URLconfig(path: "person/popular")) { people, error in
+        PeopleManager.shared.getPeople { people, error in
             if let error = error {
-                print("")
+                self.errorCallBack?(error)
             } else if let people = people {
                 self.items = people.results ?? []
-               self.successCallBack?()
+                self.successCallBack?()
             }
         }
     }
