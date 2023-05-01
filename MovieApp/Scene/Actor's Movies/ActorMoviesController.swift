@@ -8,7 +8,7 @@
 import UIKit
 
 class ActorMoviesController: UIViewController {
-
+    
     @IBOutlet weak var collection: UICollectionView!
     
     let cellId = "ActorsMovieCell"
@@ -23,7 +23,6 @@ class ActorMoviesController: UIViewController {
     }
     
     func configureUI() {
-//        collection.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
     }
     
     func configureViewModel() {
@@ -32,7 +31,7 @@ class ActorMoviesController: UIViewController {
             self.collection.reloadData()
         }
     }
-
+    
 }
 
 extension ActorMoviesController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -48,6 +47,5 @@ extension ActorMoviesController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collectionView.frame.width, height: 150)
     }
-    
     
 }

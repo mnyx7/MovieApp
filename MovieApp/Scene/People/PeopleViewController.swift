@@ -50,7 +50,7 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
         return CGSize(width: collectionView.frame.width/2 - 10, height: 220)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ActorMoviesController") as! ActorMoviesController
         vc.viewModel.id = viewModel.items[indexPath.item].id
         navigationController?.show(vc, sender: nil)

@@ -36,30 +36,4 @@ class HomeViewModel {
         }
     }
     
-//    func getPopularMovies() {
-//        NetworkManager.shared.request(model: MovieApp.self,
-//                                      url: NetworkHelper.shared.URLconfig(path: "movie/popular")) { movieData, error in
-//            if let error = error {
-//                print("")
-//            } else if let movieData = movieData {
-//                //                self.items = movieData.results ?? []
-//                self.items.append(Category(title: "Popular", items: movieData.results ?? []))
-//                self.successCallBack?()
-//            }
-//        }
-//    }
-//
-//    func getTopRatedMovies() {
-//        NetworkManager.shared.request(model: MovieApp.self,
-//                                      url: NetworkHelper.shared.URLconfig(path: "movie/top_rated")) { movieData, error in
-//            if let error = error {
-//                print("")
-//            } else if let movieData = movieData {
-//                //                self.items = movieData.results ?? []
-//                self.items.append(Category(title: "Top Rated", items: movieData.results ?? []))
-//
-//                self.successCallBack?()
-//            }
-//        }
-//    }
 }

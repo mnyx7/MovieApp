@@ -12,8 +12,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     private var movieItems = [Result]()
     var viewModel = HomeViewModel()
-    
-//    let cellId = "\(HomeXibCollectionViewCell.self)"
     let cellId = "\(TopImageButtomLabelCell.self)"
     
     override func layoutSubviews() {
@@ -24,7 +22,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     func configure(data: Category) {
         movieItems = data.items
         categoryName.text = data.title
-//        horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
         horizontalScrollCV.reloadData()
     }
 }
@@ -37,8 +34,7 @@ extension HomeCollectionViewCell: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TopImageButtomLabelCell
         cell.configure(data: movieItems[indexPath.item])
-
-        //cell.backgroundColor = .red
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

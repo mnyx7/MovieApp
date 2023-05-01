@@ -11,14 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet private weak var search: UIBarButtonItem!
     @IBOutlet private weak var collectionView: UICollectionView!
-    //    private var movieItems = [Result]()
-    //    
-    //    func configure(data: [Result]) {
-    //        movieItems = data
-    //        collectionView.reloadData()
-    //    }
     
-    //    var movies = [MovieApp]()
     var viewModel = HomeViewModel()
     
     var movieList = [MovieApp]()
@@ -32,13 +25,6 @@ class HomeViewController: UIViewController {
     }
     
     func configViewModel() {
-        //        var items: [HomeCategory] = [ .popular, .topRated ]
-        //        for item in items {
-        //            viewModel.getMovieItems(category: item)
-        //        }
-        //
-        //        viewModel.getPopularMovies()
-        //        viewModel.getTopRatedMovies()
         
         viewModel.getItems()
         
@@ -55,7 +41,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func searchTapped(_ sender: Any) {
-        //navigation.show(
+        //navigation.show
     }
 }
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
