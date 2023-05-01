@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var search: UIBarButtonItem!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var search: UIBarButtonItem!
+    @IBOutlet private weak var collectionView: UICollectionView!
     //    private var movieItems = [Result]()
     //    
     //    func configure(data: [Result]) {
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configViewModel()
-        configCollection()
+        configUI()
     }
     
     func configViewModel() {
@@ -49,8 +49,8 @@ class HomeViewController: UIViewController {
             //error message or alert
         }
     }
-    func configCollection() {
-        
+    func configUI() {
+        navigationItem.title = NSLocalizedString("home_title", comment: "")
     }
     
     

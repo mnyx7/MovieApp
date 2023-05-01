@@ -1,0 +1,30 @@
+
+/* Class = "UIViewController"; title = "Popular People"; ObjectID = "9cS-C3-PbG"; */
+"9cS-C3-PbG.title" = "Popular People";
+
+/* Class = "UINavigationItem"; title = "Popular people"; ObjectID = "DFj-ZC-exr"; */
+"DFj-ZC-exr.title" = "Popular people";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "DG0-sX-LQT"; */
+"DG0-sX-LQT.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DG0-sX-LQT"; */
+"DG0-sX-LQT.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Movies"; ObjectID = "EID-Qq-hfE"; */
+"EID-Qq-hfE.title" = "Movies";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NmO-SR-dIY"; */
+"NmO-SR-dIY.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PVG-4P-Y4a"; */
+"PVG-4P-Y4a.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vvb-e3-R1a"; */
+"Vvb-e3-R1a.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tDu-Yb-pwR"; */
+"tDu-Yb-pwR.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xeI-fV-qLB"; */
+"xeI-fV-qLB.text" = "Label";
