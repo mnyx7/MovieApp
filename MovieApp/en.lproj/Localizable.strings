@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Minaya Yagubova on 01.05.23.
+  
+*/
+// "KEY" = "Value";
+"home_title" = "Movies";
