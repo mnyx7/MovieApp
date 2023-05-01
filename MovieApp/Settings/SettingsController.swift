@@ -10,19 +10,15 @@ import UIKit
 class SettingsController: UIViewController {
 
     
- 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+    
     @IBAction func azTapped(_ sender: Any) {
     }
     @IBAction func ruTapped(_ sender: Any) {
     }
     @IBAction func enTapped(_ sender: Any) {
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-
-
-
 }

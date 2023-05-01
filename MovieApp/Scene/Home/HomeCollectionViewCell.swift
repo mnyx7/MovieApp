@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var horizontalScrollCV: UICollectionView!
     @IBOutlet private weak var categoryName: UILabel!
@@ -16,7 +17,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         horizontalScrollCV.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
-        
     }
     
     func configure(data: Category) {
@@ -37,6 +37,7 @@ extension HomeCollectionViewCell: UICollectionViewDelegate, UICollectionViewData
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 167, height: collectionView.frame.height)
     }

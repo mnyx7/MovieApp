@@ -269,9 +269,9 @@
 		654C3BCD29F12F2800ED0D2C /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				654C3BCE29F12F3400ED0D2C /* Core */,
 				6533575C29F98C860044F7AF /* PeopleManager */,
 				65C045D729F71AB200EF2D79 /* HomeManager */,
-				654C3BCE29F12F3400ED0D2C /* Core */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
