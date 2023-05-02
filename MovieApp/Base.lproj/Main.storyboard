@@ -231,16 +231,19 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="Color"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KMz-7y-uXW" kind="relationship" relationship="rootViewController" id="x8I-Xi-tNb"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5e-ds-uZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="1387"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Settings-->
         <scene sceneID="4Za-7k-VU6">
             <objects>
                 <viewController storyboardIdentifier="SettingsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMz-7y-uXW" customClass="SettingsController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="59S-BI-P5h">
-                                <rect key="frame" x="20" y="79" width="353" height="103"/>
+                                <rect key="frame" x="20" y="175" width="353" height="103"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pc-qG-Eqj">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
@@ -260,7 +263,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imn-s2-mKP">
-                                        <rect key="frame" x="0.0" y="34.333333333333329" width="353" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="34.333333333333343" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="RU"/>
                                         <connections>
@@ -278,7 +281,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmv-46-1uT">
-                                <rect key="frame" x="20" y="206" width="353" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="302" width="353" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -295,10 +298,14 @@
                             <constraint firstItem="Pmv-46-1uT" firstAttribute="top" secondItem="59S-BI-P5h" secondAttribute="bottom" constant="24" id="vOh-7x-jEN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="0gr-eO-FKo"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Pmv-46-1uT" id="EHn-rm-fSQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCT-kD-a4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="1400"/>
+            <point key="canvasLocation" x="915" y="1387"/>
         </scene>
         <!--Popular people-->
         <scene sceneID="xfG-yv-Ntr">

@@ -11,14 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet private weak var search: UIBarButtonItem!
     @IBOutlet private weak var collectionView: UICollectionView!
-    //    private var movieItems = [Result]()
-    //    
-    //    func configure(data: [Result]) {
-    //        movieItems = data
-    //        collectionView.reloadData()
-    //    }
     
-    //    var movies = [MovieApp]()
     var viewModel = HomeViewModel()
     
     var movieList = [MovieApp]()
@@ -28,17 +21,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configViewModel()
+        //configUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         configUI()
     }
     
     func configViewModel() {
-        //        var items: [HomeCategory] = [ .popular, .topRated ]
-        //        for item in items {
-        //            viewModel.getMovieItems(category: item)
-        //        }
-        //
-        //        viewModel.getPopularMovies()
-        //        viewModel.getTopRatedMovies()
         
         viewModel.getItems()
         
@@ -50,7 +39,11 @@ class HomeViewController: UIViewController {
         }
     }
     func configUI() {
-        navigationItem.title = NSLocalizedString("home_title", comment: "")
+        let lang = UserDefaults.standard.string(forKey: "appLang")
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj") ?? ""
+        let bundle = Bundle(path: path) ?? Bundle()
+        navigationItem.title = NSLocalizedString("home_title", tableName: nil, bundle: bundle, value: "", comment: "")
+        //NSLocalizedString("home_title", comment: "")
     }
     
     
