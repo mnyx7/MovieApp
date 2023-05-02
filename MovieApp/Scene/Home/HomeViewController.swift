@@ -39,10 +39,8 @@ class HomeViewController: UIViewController {
         }
     }
     func configUI() {
-        let lang = UserDefaults.standard.string(forKey: "appLang")
-        let path = Bundle.main.path(forResource: lang, ofType: "lproj") ?? ""
-        let bundle = Bundle(path: path) ?? Bundle()
-        navigationItem.title = NSLocalizedString("home_title", tableName: nil, bundle: bundle, value: "", comment: "")
+        navigationItem.title = "home_title".localize
+        collectionView.reloadData()
         //NSLocalizedString("home_title", comment: "")
     }
     

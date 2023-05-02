@@ -7,3 +7,5 @@
 */
 // "KEY" = "Value";
 "home_title" = "Movies";
+"home_category_popular" = "Popular";
+"home_category_topRated" = "Top Rated";

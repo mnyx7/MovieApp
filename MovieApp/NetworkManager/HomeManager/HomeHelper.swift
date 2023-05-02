@@ -8,8 +8,8 @@
 import Foundation
 
 enum HomeCategory: String {
-    case popular = "Popular"
-    case topRated = "Top Rated"
+    case popular = "home_category_popular"
+    case topRated = "home_category_topRated"
 }
 
 enum HomeEndpoint: String {
