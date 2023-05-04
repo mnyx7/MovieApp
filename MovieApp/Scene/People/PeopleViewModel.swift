@@ -14,7 +14,7 @@ class PeopleViewModel {
     var items = [PeopleResult]()
     
     func getPopularPeople() {
-        PeopleManager.shared.getPeople { people, error in
+        PeopleMockManager.shared.getPeople { people, error in
             if let error = error {
                 self.errorCallBack?(error)
             } else if let people = people {

@@ -14,6 +14,9 @@
 		6506F19829F469C400067CBE /* TopImageButtomLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6506F19629F469C400067CBE /* TopImageButtomLabelCell.xib */; };
 		6506F19A29F46E7C00067CBE /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506F19929F46E7C00067CBE /* People.swift */; };
 		65205D6E2A01296F001FE8DC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65205D6D2A01296F001FE8DC /* String+Extension.swift */; };
+		65205D712A013916001FE8DC /* PeopleManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65205D702A013916001FE8DC /* PeopleManagerProtocol.swift */; };
+		65205D742A013A37001FE8DC /* PopularPeople.json in Sources */ = {isa = PBXBuildFile; fileRef = 65205D732A013A37001FE8DC /* PopularPeople.json */; };
+		65205D762A013AC7001FE8DC /* PeopleMockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65205D752A013AC7001FE8DC /* PeopleMockManager.swift */; };
 		652BEA0A29F1A0260069F0D4 /* HomeXibCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BEA0829F1A0260069F0D4 /* HomeXibCollectionViewCell.swift */; };
 		652BEA0B29F1A0260069F0D4 /* HomeXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652BEA0929F1A0260069F0D4 /* HomeXibCollectionViewCell.xib */; };
 		652BEA0D29F1A3300069F0D4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BEA0C29F1A3300069F0D4 /* HomeCollectionViewCell.swift */; };
@@ -71,6 +74,9 @@
 		6506F19629F469C400067CBE /* TopImageButtomLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopImageButtomLabelCell.xib; sourceTree = "<group>"; };
 		6506F19929F46E7C00067CBE /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		65205D6D2A01296F001FE8DC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		65205D702A013916001FE8DC /* PeopleManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleManagerProtocol.swift; sourceTree = "<group>"; };
+		65205D732A013A37001FE8DC /* PopularPeople.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PopularPeople.json; sourceTree = "<group>"; };
+		65205D752A013AC7001FE8DC /* PeopleMockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMockManager.swift; sourceTree = "<group>"; };
 		652BEA0829F1A0260069F0D4 /* HomeXibCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeXibCollectionViewCell.swift; sourceTree = "<group>"; };
 		652BEA0929F1A0260069F0D4 /* HomeXibCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeXibCollectionViewCell.xib; sourceTree = "<group>"; };
 		652BEA0C29F1A3300069F0D4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -187,11 +193,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		65205D722A013A22001FE8DC /* MockFiles */ = {
+			isa = PBXGroup;
+			children = (
+				65205D732A013A37001FE8DC /* PopularPeople.json */,
+			);
+			path = MockFiles;
+			sourceTree = "<group>";
+		};
 		6533575C29F98C860044F7AF /* PeopleManager */ = {
 			isa = PBXGroup;
 			children = (
+				65205D722A013A22001FE8DC /* MockFiles */,
 				6533575D29F98CCF0044F7AF /* PeopleManager.swift */,
 				6533575F29FAC7650044F7AF /* PeopleHelper.swift */,
+				65205D702A013916001FE8DC /* PeopleManagerProtocol.swift */,
+				65205D752A013AC7001FE8DC /* PeopleMockManager.swift */,
 			);
 			path = PeopleManager;
 			sourceTree = "<group>";
@@ -524,6 +541,7 @@
 				6506F19729F469C400067CBE /* TopImageButtomLabelCell.swift in Sources */,
 				65205D6E2A01296F001FE8DC /* String+Extension.swift in Sources */,
 				6506F19A29F46E7C00067CBE /* People.swift in Sources */,
+				65205D762A013AC7001FE8DC /* PeopleMockManager.swift in Sources */,
 				65B71B9529E443B600A1DA0A /* CategoryStruct.swift in Sources */,
 				654C3BD229F12F8700ED0D2C /* NetworkManager.swift in Sources */,
 				65C045E429F7D60300EF2D79 /* ActorMoviesStruct.swift in Sources */,
@@ -536,11 +554,13 @@
 				6533576029FAC7650044F7AF /* PeopleHelper.swift in Sources */,
 				65C7EF6E29E1665B00B52D6C /* MovieAppStruct.swift in Sources */,
 				65B71B9829E4452200A1DA0A /* HomeViewModel.swift in Sources */,
+				65205D742A013A37001FE8DC /* PopularPeople.json in Sources */,
 				65C045DD29F7D3E800EF2D79 /* ActorMoviesController.swift in Sources */,
 				65C7EF6029E161C500B52D6C /* MovieApp.xcdatamodeld in Sources */,
 				65C045D929F71AC700EF2D79 /* HomeManager.swift in Sources */,
 				65CEF75129E427F40061780C /* HomeViewController.swift in Sources */,
 				65C7EF5829E161C500B52D6C /* SceneDelegate.swift in Sources */,
+				65205D712A013916001FE8DC /* PeopleManagerProtocol.swift in Sources */,
 				652BEA0A29F1A0260069F0D4 /* HomeXibCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

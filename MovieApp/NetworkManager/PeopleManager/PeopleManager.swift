@@ -6,7 +6,8 @@
 //
 
 import Foundation
-class PeopleManager {
+
+class PeopleManager: PeopleManagerProtocol {
     static let shared = PeopleManager()
     
     func getPeople(complete: @escaping((People?, String?)->())) {
@@ -14,6 +15,7 @@ class PeopleManager {
                                       url: PeopleEndpoint.personPopular.path,
                                       complete: complete)
     }
+    
     func getKnownFor(id: Int, complete: @escaping((ActorMovie?, String?)->())) {
         NetworkManager.shared.request(model: ActorMovie.self,
                                       url: NetworkHelper.shared.URLconfig(path: "person/\(id)/movie_credits"),
@@ -21,3 +23,4 @@ class PeopleManager {
     }
     
 }
+
