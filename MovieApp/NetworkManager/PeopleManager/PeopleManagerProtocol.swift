@@ -8,6 +8,6 @@
 import Foundation
 
 protocol PeopleManagerProtocol {
-    func getPeople(complete: @escaping((People?, String?)->()))
+    func getPeople(page: Int, complete: @escaping((People?, String?)->()))
     func getKnownFor(id: Int, complete: @escaping((ActorMovie?, String?)->()))
 }

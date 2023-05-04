@@ -10,9 +10,11 @@ import Foundation
 class PeopleManager: PeopleManagerProtocol {
     static let shared = PeopleManager()
     
-    func getPeople(complete: @escaping((People?, String?)->())) {
+    func getPeople(page: Int, complete: @escaping((People?, String?)->())) {
+        let url = PeopleEndpoint.personPopular.path + "&page=\(page)"
+        print("url: \(url)")
         NetworkManager.shared.request(model: People.self,
-                                      url: PeopleEndpoint.personPopular.path,
+                                      url: PeopleEndpoint.personPopular.path + "&page=\(page)",
                                       complete: complete)
     }
     
