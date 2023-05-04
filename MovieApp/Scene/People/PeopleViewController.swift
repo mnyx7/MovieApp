@@ -29,6 +29,7 @@ class PeopleViewController: UIViewController {
     }
     
     func configureViewModel() {
+        
         refreshController.beginRefreshing()
         viewModel.getPopularPeople()
         viewModel.successCallBack = {
@@ -37,6 +38,14 @@ class PeopleViewController: UIViewController {
         viewModel.errorCallBack = { message in
             print("people error: \(message)")
         }
+//        refreshController.beginRefreshing()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            self.viewModel.getPopularPeople()
+//        }
+//        viewModel.successCallback = {
+//            self.refreshController.endRefreshing()
+//            self.collection.reloadData()
+//        }
     }
     
     @objc func pullToRefresh() {
