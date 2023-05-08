@@ -10,8 +10,8 @@ class PeopleMockManager: PeopleManagerProtocol {
     static let shared = PeopleMockManager()
     
     func getPeople(page: Int, complete: @escaping ((People?, String?) -> ())) {
-        if let file = Bundle.main.url(forResource: "PopularPeople", withExtension: "json"),
-           let data = try? Data(contentsOf: file)  {
+        if let file = Bundle.main.url(forResource: "People", withExtension: "json"),
+            let data = try? Data(contentsOf: file)  {
             do {
                 let people = try JSONDecoder().decode(People.self, from: data)
                 complete(people,nil)
@@ -20,6 +20,7 @@ class PeopleMockManager: PeopleManagerProtocol {
             }
         }
     }
+    
     func getKnownFor(id: Int, complete: @escaping ((ActorMovie?, String?) -> ())) {
         
     }

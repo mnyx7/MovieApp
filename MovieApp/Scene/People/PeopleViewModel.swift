@@ -15,12 +15,11 @@ class PeopleViewModel {
     var people: People?
     
     func getPopularPeople() {
-        PeopleManager.shared.getPeople(page: (people?.page ?? 0) + 1) { people, error in
+        PeopleMockManager.shared.getPeople(page: (people?.page ?? 0) + 1) { people, error in
             if let error = error {
                 self.errorCallBack?(error)
             } else if let people = people {
                 self.people = people
-                self.items = people.results ?? []
                 self.items.append(contentsOf: people.results ?? [])
                 self.successCallBack?()
             }
@@ -32,9 +31,10 @@ class PeopleViewModel {
             getPopularPeople()
         }
     }
+    
     func reset() {
         items.removeAll()
         people = nil
-        getPopularPeople()
+//        getPopularPeople()
     }
 }

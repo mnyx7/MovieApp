@@ -23,37 +23,28 @@ class PeopleViewController: UIViewController {
     }
     
     func configureUI() {
-        refreshController.addTarget(self, action: #selector(pullToRefresh ), for: .valueChanged)
+        refreshController.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         collection.refreshControl = refreshController
         collection.register(UINib(nibName: cellId, bundle: nil), forCellWithReuseIdentifier: cellId)
     }
     
     func configureViewModel() {
-        
         refreshController.beginRefreshing()
         viewModel.getPopularPeople()
         viewModel.successCallBack = {
             self.collection.reloadData()
+            self.refreshController.endRefreshing()
         }
         viewModel.errorCallBack = { message in
             print("people error: \(message)")
+            self.refreshController.endRefreshing()
         }
-//        refreshController.beginRefreshing()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.viewModel.getPopularPeople()
-//        }
-//        viewModel.successCallback = {
-//            self.refreshController.endRefreshing()
-//            self.collection.reloadData()
-//        }
     }
     
     @objc func pullToRefresh() {
         viewModel.reset()
         collection.reloadData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.viewModel.getPopularPeople()
-        }
+        viewModel.getPopularPeople()
     }
 }
 
