@@ -13,6 +13,8 @@ class PeopleViewController: UIViewController {
     private let viewModel = PeopleViewModel()
     private let cellId = "\(TopImageButtomLabelCell.self )"
     
+    var coordinator: PeopleCoordinator?
+    
     let refreshController = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -20,6 +22,8 @@ class PeopleViewController: UIViewController {
         
         configureUI()
         configureViewModel()
+        
+        coordinator = PeopleCoordinator(navigationController: navigationController ?? UINavigationController())
     }
     
     func configureUI() {
@@ -64,9 +68,7 @@ extension PeopleViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ActorMoviesController") as! ActorMoviesController
-        vc.viewModel.id = viewModel.items[indexPath.item].id
-        navigationController?.show(vc, sender: nil)
+        coordinator?.showPeopleMoviesController(id: viewModel.items[indexPath.item].id ?? 0)
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         viewModel.pagination(index: indexPath.item)

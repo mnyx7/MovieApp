@@ -55,6 +55,8 @@
 		65C045E229F7D5C000EF2D79 /* ActorMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C045E129F7D5C000EF2D79 /* ActorMoviesViewModel.swift */; };
 		65C045E429F7D60300EF2D79 /* ActorMoviesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C045E329F7D60300EF2D79 /* ActorMoviesStruct.swift */; };
 		65C34E772A0945E000C3E5BB /* PopularPeople.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C34E762A0945E000C3E5BB /* PopularPeople.json */; };
+		65C34E7A2A095A6700C3E5BB /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C34E792A095A6700C3E5BB /* PeopleCoordinator.swift */; };
+		65C34E7C2A095D6700C3E5BB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C34E7B2A095D6600C3E5BB /* Coordinator.swift */; };
 		65C7EF5629E161C500B52D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7EF5529E161C500B52D6C /* AppDelegate.swift */; };
 		65C7EF5829E161C500B52D6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7EF5729E161C500B52D6C /* SceneDelegate.swift */; };
 		65C7EF5D29E161C500B52D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C7EF5B29E161C500B52D6C /* Main.storyboard */; };
@@ -122,6 +124,8 @@
 		65C045E129F7D5C000EF2D79 /* ActorMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorMoviesViewModel.swift; sourceTree = "<group>"; };
 		65C045E329F7D60300EF2D79 /* ActorMoviesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorMoviesStruct.swift; sourceTree = "<group>"; };
 		65C34E762A0945E000C3E5BB /* PopularPeople.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PopularPeople.json; sourceTree = "<group>"; };
+		65C34E792A095A6700C3E5BB /* PeopleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
+		65C34E7B2A095D6600C3E5BB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		65C7EF5229E161C500B52D6C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C7EF5529E161C500B52D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C7EF5729E161C500B52D6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -345,6 +349,15 @@
 			path = "Actor's Movies";
 			sourceTree = "<group>";
 		};
+		65C34E782A095A4C00C3E5BB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				65C34E7B2A095D6600C3E5BB /* Coordinator.swift */,
+				65C34E792A095A6700C3E5BB /* PeopleCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		65C7EF4929E161C500B52D6C = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +381,7 @@
 			children = (
 				65C7EF5529E161C500B52D6C /* AppDelegate.swift */,
 				65C7EF5729E161C500B52D6C /* SceneDelegate.swift */,
+				65C34E782A095A4C00C3E5BB /* Coordinator */,
 				654C3BCD29F12F2800ED0D2C /* NetworkManager */,
 				654C3BA129F129DC00ED0D2C /* Helper */,
 				65C7EF6C29E1664500B52D6C /* Structs */,
@@ -544,9 +558,11 @@
 				6506F19A29F46E7C00067CBE /* People.swift in Sources */,
 				65205D762A013AC7001FE8DC /* PeopleMockManager.swift in Sources */,
 				65B71B9529E443B600A1DA0A /* CategoryStruct.swift in Sources */,
+				65C34E7A2A095A6700C3E5BB /* PeopleCoordinator.swift in Sources */,
 				654C3BD229F12F8700ED0D2C /* NetworkManager.swift in Sources */,
 				65C045E429F7D60300EF2D79 /* ActorMoviesStruct.swift in Sources */,
 				6506F18D29F3D7D100067CBE /* UIImageView + Extensions.swift in Sources */,
+				65C34E7C2A095D6700C3E5BB /* Coordinator.swift in Sources */,
 				6506F19029F405FA00067CBE /* PeopleViewController.swift in Sources */,
 				6533575E29F98CCF0044F7AF /* PeopleManager.swift in Sources */,
 				65C7EF5629E161C500B52D6C /* AppDelegate.swift in Sources */,
